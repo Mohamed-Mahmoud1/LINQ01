@@ -36,9 +36,16 @@
 
             #endregion
 
-          
+            #region Q5
 
+            //var result = Source.ProductList
+            //  .Where(p => p.UnitsInStock > 0 && p.Category == "Condiments");
+
+
+            #endregion
        
+
+
 
         }
     }
