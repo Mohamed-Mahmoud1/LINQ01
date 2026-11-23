@@ -72,17 +72,28 @@
 
             #region Q9
 
-           var result = Source.ProductList
-            .Where(p => p.Category == "Beverages")
-            .OrderByDescending(p => p.UnitsInStock)
-            .Select(p => new { p.ProductName, p.UnitsInStock });
+           //var result = Source.ProductList
+           // .Where(p => p.Category == "Beverages")
+           // .OrderByDescending(p => p.UnitsInStock)
+           // .Select(p => new { p.ProductName, p.UnitsInStock });
 
 
 
             #endregion
 
+            #region Q10
 
-       
+           var result = from c in Source.CustomerList
+                        from o in c.Orders
+                        where o.OrderDate.Year >= 1997
+                        select new { c.CustomerID, o.OrderDate };
+
+
+
+            #endregion
+
+        
+
 
         }
     }
