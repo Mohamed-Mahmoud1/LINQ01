@@ -94,16 +94,26 @@
 
             #region Q11
 
-            var result = Source.ProductList
-                          .Select((p, i) => $"{i + 1}. {p.ProductName}");
+            //var result = Source.ProductList
+            //              .Select((p, i) => $"{i + 1}. {p.ProductName}");
 
 
 
 
             #endregion
 
-    
+            #region Q12
+            String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result = Arr
+                .OrderBy(s => s.Length)
+                .ThenBy(s => s.ToLower());
 
+
+
+
+            #endregion
+
+       
 
         }
     }
