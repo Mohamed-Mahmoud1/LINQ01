@@ -46,15 +46,24 @@
        
             #region Q6
 
-            var result = Source.ProductList
-             .Select(p=> new {Name= p.ProductName,price= p.UnitPrice , StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"});
+            //var result = Source.ProductList
+            // .Select(p=> new {Name= p.ProductName,price= p.UnitPrice , StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"});
 
 
             #endregion
 
          
+            #region Q7
+
+            var result = Source.ProductList
+             .Select((p,i)=>$"{i + 1}. {p.ProductName}");
 
 
+            #endregion
+
+
+
+         
         }
     }
 }
