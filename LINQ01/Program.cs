@@ -43,7 +43,7 @@
 
 
             #endregion
-       
+
             #region Q6
 
             //var result = Source.ProductList
@@ -52,18 +52,27 @@
 
             #endregion
 
-         
+
             #region Q7
 
+            //var result = Source.ProductList
+            // .Select((p,i)=>$"{i + 1}. {p.ProductName}");
+
+
+            #endregion
+
+            #region Q8
+
             var result = Source.ProductList
-             .Select((p,i)=>$"{i + 1}. {p.ProductName}");
+            .OrderBy(p => p.Category)
+            .ThenByDescending(p => p.UnitPrice);
 
 
             #endregion
 
 
+        
 
-         
         }
     }
 }
