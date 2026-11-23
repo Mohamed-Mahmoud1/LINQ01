@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Q1
+
+            var result = Source.ProductList
+                .Where(p => p.Category == "Seafood")
+                .Select(p => new { p.ProductName, p.UnitPrice });
+            #endregion
         }
     }
 }
