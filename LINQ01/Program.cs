@@ -63,15 +63,26 @@
 
             #region Q8
 
-            var result = Source.ProductList
-            .OrderBy(p => p.Category)
-            .ThenByDescending(p => p.UnitPrice);
+            //var result = Source.ProductList
+            //.OrderBy(p => p.Category)
+            //.ThenByDescending(p => p.UnitPrice);
+
+
+            #endregion
+
+            #region Q9
+
+           var result = Source.ProductList
+            .Where(p => p.Category == "Beverages")
+            .OrderByDescending(p => p.UnitsInStock)
+            .Select(p => new { p.ProductName, p.UnitsInStock });
+
 
 
             #endregion
 
 
-        
+       
 
         }
     }
