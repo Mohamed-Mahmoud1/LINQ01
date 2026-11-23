@@ -103,17 +103,25 @@
             #endregion
 
             #region Q12
-            String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-            var result = Arr
-                .OrderBy(s => s.Length)
-                .ThenBy(s => s.ToLower());
+            //String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var result = Arr
+            //    .OrderBy(s => s.Length)
+            //    .ThenBy(s => s.ToLower());
 
 
 
 
             #endregion
 
-       
+            #region Q13
+            String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result = Arr
+                .Where(s => s.Length > 1 && s[1] == 'i')
+                .Reverse()
+                .ToList();
+            #endregion
+
+        
 
         }
     }
