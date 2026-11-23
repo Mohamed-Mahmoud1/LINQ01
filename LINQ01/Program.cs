@@ -6,9 +6,17 @@
         {
             #region Q1
 
-            var result = Source.ProductList
-                .Where(p => p.Category == "Seafood")
-                .Select(p => new { p.ProductName, p.UnitPrice });
+            //var result = Source.ProductList
+            //    .Where(p => p.Category == "Seafood")
+            //    .Select(p => new { p.ProductName, p.UnitPrice });
+            #endregion
+
+
+            #region Q2
+
+            //var result = Source.ProductList
+            //    .Select(p => p.ProductName);
+
             #endregion
         }
     }
