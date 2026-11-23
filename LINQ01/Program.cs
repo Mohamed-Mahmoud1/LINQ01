@@ -44,7 +44,15 @@
 
             #endregion
        
+            #region Q6
 
+            var result = Source.ProductList
+             .Select(p=> new {Name= p.ProductName,price= p.UnitPrice , StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"});
+
+
+            #endregion
+
+         
 
 
         }
