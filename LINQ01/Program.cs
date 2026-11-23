@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            
             #region Q1
 
             //var result = Source.ProductList
@@ -18,6 +19,17 @@
             //    .Select(p => p.ProductName);
 
             #endregion
+
+            #region Q3
+
+            var result = Source.ProductList
+              .OrderBy(p =>p.UnitPrice)
+              .Select(p => new { p.ProductName, p.UnitPrice });
+
+            #endregion
+
+         
+
         }
     }
 }
